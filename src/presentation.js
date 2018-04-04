@@ -19,23 +19,8 @@ import {
   Code
 } from 'spectacle';
 
-// Import theme
-import createTheme from 'spectacle/lib/themes/default';
-
-// Require CSS
-require('normalize.css');
-
-const colors = {
-  primary: 'white',
-  secondary: '#100830',
-  tertiary: '#73E9AC',
-  quartenary: '#9E79F3'
-};
-
-const theme = createTheme(colors, {
-  primary: 'Montserrat',
-  secondary: 'Helvetica'
-});
+import images from './images';
+import theme, { colors } from './theme';
 
 const listStyle = { marginBottom: 20, fontWeight: 'bold' };
 
@@ -48,7 +33,7 @@ export default class Presentation extends React.Component {
             Hello
           </Heading>
           <Heading size={1} textColor="primary">
-            👋
+            <span role="img" aria-label="Hello">👋</span>
           </Heading>
         </Slide>
         <Slide
@@ -68,7 +53,7 @@ export default class Presentation extends React.Component {
                 <ListItem textColor="primary">@NikkitaFTW</ListItem>
                 <ListItem textColor="primary" style={{ display: 'flex', marginTop: 20 }}>
                   <Image
-                    src="https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/soccer.svg"
+                    src={images.soccer}
                     style={{
                       width: 50,
                       height: 50,
@@ -81,7 +66,7 @@ export default class Presentation extends React.Component {
                 </ListItem>
                 <ListItem textColor="primary" style={{ display: 'flex', marginTop: 20 }}>
                   <Image
-                    src="https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/zombie.svg"
+                    src={images.zombie}
                     style={{
                       width: 50,
                       height: 50,
@@ -93,7 +78,7 @@ export default class Presentation extends React.Component {
                   </Text>
                 </ListItem>
                 <ListItem textColor="primary" style={{ display: 'flex' }}>
-                  <Image src="https://i.imgur.com/7zkiG.gif" />
+                  <Image src={images.train} />
                 </ListItem>
               </List>
             </Fit>
@@ -106,7 +91,7 @@ export default class Presentation extends React.Component {
                   position: 'relative',
                   transform: 'translateY(-50%)'
                 }}
-                src="https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/image.gif"
+                src={images.YLDLogo}
               />
             </Fit>
           </Layout>
@@ -131,16 +116,14 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Let's talk about mental health
           </Heading>
-          <Heading size={6} caps lineHeight={1} textColor="tertiary">
-            I know it's 9am and I am sorry
-          </Heading>
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={2} caps lineHeight={1.2} textColor="primary">
             Your Brain does not a have a fix flag
           </Heading>
           <Heading size={6} caps lineHeight={1.2} textColor="tertiary">
-            Because of eslint get it ? 🤦‍
+            Because of eslint get it ?
+            <span role="img" aria-label="Facepalm">🤦‍</span>
           </Heading>
         </Slide>
         <Slide bgColor="secondary">
@@ -287,11 +270,6 @@ export default class Presentation extends React.Component {
             Why the fuck ? Are you dumb or something ?
           </Heading>
         </Slide>
-        {/* <Slide bgColor="secondary">
-          <Heading size={3} lineHeight={1} textColor="primary">
-            Well I am not the sharpest tool in the shed but that's not why
-          </Heading>
-        </Slide> */}
         <Slide bgColor="secondary">
           <Heading size={3} caps lineHeight={1} textColor="tertiary">
             I felt alone !
@@ -339,13 +317,13 @@ export default class Presentation extends React.Component {
           <Heading size={6} lineHeight={1} textColor="primary">
             I was 19 and I looked like this the last time I remember feeling normal
           </Heading>
-          <Image src={require('./me.jpg')} />
+          <Image src={require('./assets/me.jpg')} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={6} lineHeight={1} textColor="primary">
             Just for funsies here is my license photo:
           </Heading>
-          <Image height="500" src={require('./license.jpg')} />
+          <Image height="500" src={require('./assets/license.jpg')} />
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} caps fit lineHeight={1} textColor="secondary">
@@ -373,7 +351,11 @@ export default class Presentation extends React.Component {
           <Heading size={1} caps lineHeight={1} textColor="primary">
             My story
           </Heading>
-          <Text textColor="tertiary">🥁 Drumroll 🥁</Text>
+          <Text textColor="tertiary">
+            <span role="img" aria-label="Drumroll">🥁</span>
+            {' '}Drumroll{' '}
+            <span role="img" aria-label="Drumroll">🥁</span>
+          </Text>
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} lineHeight={1} textColor="primary">
@@ -430,13 +412,13 @@ export default class Presentation extends React.Component {
           <Heading size={3} lineHeight={1} textColor="primary">
             I started getting better at my job
           </Heading>
-          <Image src="https://media.giphy.com/media/q5SQq54TYSBIk/giphy.gif" />
+          <Image src={images.job} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} lineHeight={1} textColor="primary">
             I started getting more responsibilities
           </Heading>
-          <Image src="https://media1.giphy.com/media/kH8SMON4jB3lm/giphy.gif" />
+          <Image src={images.resp} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} lineHeight={1} textColor="primary">
@@ -451,7 +433,7 @@ export default class Presentation extends React.Component {
           <Heading size={3} lineHeight={1} textColor="primary">
             I started staying at work until 8PM on a daily basis
           </Heading>
-          <Image src="https://media.giphy.com/media/VD9NtdBN9CwqQ/giphy.gif" />
+          <Image src={images.nosleep} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={3} lineHeight={1} textColor="primary">
@@ -524,7 +506,6 @@ export default class Presentation extends React.Component {
           <Heading size={5} lineHeight={1.1} textColor="primary">
             This was physical
           </Heading>
-          {/* <Appear><Text textColor="tertiary">I thought I was dying</Text></Appear> */}
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={2} caps lineHeight={1.1} textColor="tertiary">
@@ -637,36 +618,37 @@ export default class Presentation extends React.Component {
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I moved jobs
           </Heading>
+          <img alt="new job" src={images.newJob} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             And city
           </Heading>
-          <img src={require('./lisbon.jpg')} />
+          <img alt="lisbon" src={images.lisbon} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I lived in London for 3 months
           </Heading>
-          <img src={require('./london.jpg')} />
+          <img alt="things" src={images.london} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I bought a motorcycle
           </Heading>
-          <img src={require('./moto.jpg')} />
+          <img alt="things" src={images.moto} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I Lost 20KG
           </Heading>
-          <img src={require('./me2.jpg')} height={500} />
+          <img alt="things" src={images.weight} height={500} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I Spoke in Conferences
           </Heading>
-          <img src={require('./talk.jpg')} height={500} />
+          <img alt="things" src={images.talk} height={500} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading
@@ -677,23 +659,23 @@ export default class Presentation extends React.Component {
             textColor="primary">
             I met amazing people
           </Heading>
-          <img
-            src={require('./peeps.jpg')}
+          <img alt="things"
+            src={images.people[0]}
             height={500}
             style={{ position: 'absolute', zIndex: 1, top: '-150%' }}
           />
-          <img
-            src={require('./people2.jpg')}
+          <img alt="things"
+            src={images.people[1]}
             height={500}
             style={{ position: 'absolute', zIndex: 1, top: '70px', left: '-18%' }}
           />
-          <img
-            src={require('./people3.jpg')}
+          <img alt="things"
+            src={images.people[2]}
             height={500}
             style={{ position: 'absolute', zIndex: 1, top: 80 }}
           />
-          <img
-            src={require('./people4.jpg')}
+          <img alt="things"
+            src={images.people[3]}
             height={500}
             style={{ position: 'absolute', zIndex: 0, top: '-300px', left: '-190px' }}
           />
@@ -702,19 +684,25 @@ export default class Presentation extends React.Component {
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I started contributing to open source
           </Heading>
-          <img src={require('./oss.png')} height={500} />
+          <img alt="things" src={images.oss} height={500} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I started liking football again
           </Heading>
-          <img src={require('./slb.jpg')} height={500} />
+          <img alt="things" src={images.slb} height={500} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
             I traveled alone
           </Heading>
-          <img src={require('./alone.jpg')} height={500} />
+          <img alt="things" src={images.alone} height={500} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size={5} caps lineHeight={1.5} textColor="primary">
+            I helped organize a conference
+          </Heading>
+          <img alt="things" src={images.reactFest} height={500} />
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={5} caps lineHeight={1.5} textColor="primary">
@@ -749,9 +737,10 @@ export default class Presentation extends React.Component {
             <Text textColor="tertiary">@NikkitaFTW</Text>
           </Appear>
         </Slide>
-        <Slide bgImage={require('./bg.jpg')}>
+        <Slide bgImage={require('./assets/bg.jpg')}>
           <Heading size={1} caps bgSize={100} textColor="primary">
-            Thank you 🇦🇹
+            Thank you
+            <span role="img" aria-label="UK">🇬🇧</span>
           </Heading>
           <Code size={1} textColor="primary">
             https://brain-fix.now.sh/
