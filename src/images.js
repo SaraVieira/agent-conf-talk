@@ -1,9 +1,12 @@
 export default {
-    soccer: 'https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/soccer.svg',
-    zombie: 'https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/zombie.svg',
+    soccer:
+        'https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/soccer.svg',
+    zombie:
+        'https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/zombie.svg',
     train: 'https://i.imgur.com/7zkiG.gif',
-    YLDLogo: 'https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/image.gif',
-    job: "https://media.giphy.com/media/q5SQq54TYSBIk/giphy.gif",
+    YLDLogo:
+        'https://cdn.rawgit.com/SaraVieira/styleguide-driven-development/master/assets/image.gif',
+    job: 'https://media.giphy.com/media/q5SQq54TYSBIk/giphy.gif',
     resp: 'https://media1.giphy.com/media/kH8SMON4jB3lm/giphy.gif',
     nosleep: 'https://media.giphy.com/media/VD9NtdBN9CwqQ/giphy.gif',
     newJob: require('./assets/yld.jpg'),
@@ -21,6 +24,11 @@ export default {
     oss: require('./assets/oss.png'),
     slb: require('./assets/slb.jpg'),
     alone: require('./assets/alone.jpg'),
-    reactFest: require('./assets/reactfest.jpg')
-
-}
+    reactFest: require('./assets/reactfest.jpg'),
+    eat: require('./assets/eat.jpg'),
+    deep: require('./assets/deep.jpg'),
+    tour1: require('./assets/tour1.jpg'),
+    tour2: require('./assets/tour2.jpg'),
+    hello: require('./assets/hello.jpg'),
+    coffee: require('./assets/coffee.jpg')
+};
