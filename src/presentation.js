@@ -929,37 +929,37 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide bgColor="secondary">
                     <Heading size={5} caps lineHeight={1.5} textColor="primary">
-                        I got stuck in Frankfurt of 13 hours with just Kickass
+                        I got stuck in Frankfurt for 13 hours with just Kickass
                     </Heading>
                     <img alt="things" src={images.hello} height={500} />
                 </Slide>
                 <Slide bgColor="secondary">
                     <Heading size={5} caps lineHeight={1.5} textColor="primary">
-                        And had a blast
+                        And we had a blast
                     </Heading>
                     <img alt="things" src={images.coffee} height={500} />
                 </Slide>
                 <Slide bgColor="secondary">
                     <Heading size={5} caps lineHeight={1.5} textColor="primary">
-                        And had a blast
+                        And we had a blast
                     </Heading>
                     <img alt="things" src={images.eat} height={500} />
                 </Slide>
                 <Slide bgColor="secondary">
                     <Heading size={5} caps lineHeight={1.5} textColor="primary">
-                        And had a blast
+                        And we had a blast
                     </Heading>
                     <img alt="things" src={images.tour1} height={500} />
                 </Slide>
                 <Slide bgColor="secondary">
                     <Heading size={5} caps lineHeight={1.5} textColor="primary">
-                        And had a blast
+                        And we had a blast
                     </Heading>
                     <img alt="things" src={images.tour2} height={500} />
                 </Slide>
                 <Slide bgColor="secondary">
                     <Heading size={5} caps lineHeight={1.5} textColor="primary">
-                        And had a blast
+                        And we had a blast
                     </Heading>
                     <img alt="things" src={images.deep} height={500} />
                 </Slide>
